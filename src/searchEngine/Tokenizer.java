@@ -1,5 +1,6 @@
 package searchEngine;
 
+// Snowball stemming algorithm
 import org.tartarus.snowball.ext.EnglishStemmer;
 
 import java.io.*;

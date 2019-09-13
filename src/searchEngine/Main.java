@@ -12,6 +12,11 @@ public class Main {
 
             System.gc();    // garbage collector
 
+            InvertedIndex invertedIndex = new InvertedIndex();
+
+            invertedIndex.createInvertedIndex_inMemory();
+            invertedIndex.writeInvertedIndex_toFile();
+
 
         }
         else
