@@ -11,11 +11,12 @@ public class Tokenizer {
 
     private String path;
     private ArrayList<String> fileNames;
-    private HashMap<String, Integer> dictionary;
+    private HashMap<String, Integer> dictionary;    // also contains mapping to termids
     private HashMap<String, String> stoplist;
-    private TreeMap<Tuple, ArrayList<Integer>> forwardIndex;
+    private TreeMap<Tuple, ArrayList<Integer>> forwardIndex;        // without hashMap
     int terms =0;
 
+    // Tuple <termID, docID> implements the Comparable interface
     public class Tuple implements Comparable{
 
         private int termID;
@@ -64,10 +65,6 @@ public class Tokenizer {
             return (this.termID == ((Tuple) obj).termID && this.docID == ((Tuple) obj).docID);
         }
 
-        @Override
-        public int hashCode(){
-            return termID + (docID * 31);
-        }
 
     }
 
@@ -84,13 +81,15 @@ public class Tokenizer {
     void stoplist_reader(){
 
         try{
-            BufferedReader reader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\searchEngine\\stoplist.txt"));
+            // reading stoplis.txt file
+            BufferedReader stoplist_reader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\searchEngine\\stoplist.txt"));
 
-            String word = reader.readLine();
+            String word = stoplist_reader.readLine();
 
+            // creating hashMap of the stoplist
             while (word != null){
-                stoplist.put(word, null);
-                word = reader.readLine();
+                stoplist.put(word, null);     // terminating each entry with null
+                word = stoplist_reader.readLine();
             }
 
         }
@@ -108,6 +107,8 @@ public class Tokenizer {
         EnglishStemmer stemmer = new EnglishStemmer();
 
 
+
+        // creating termids.txt, docids.txt & doc_index.txt files
         try{
             termID_writer = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\termids.txt"));
 
@@ -126,12 +127,14 @@ public class Tokenizer {
 
             System.out.println("Processing Document#: " + (i + 1) + ".(" + fileNames.get(i) + ")");
 
+            // reading the document
             String extract = FileHandler.fetchString_http(path + "\\" + fileNames.get(i));
 
 
             if (extract == null)
                 continue;
 
+            // tokenizing based on this delimiting regular expression [\\p{Punct}\\s]+ with no limit
             String[] tokens = extract.split("[\\p{Punct}\\s]+");
 
             int termID =1;
@@ -139,17 +142,23 @@ public class Tokenizer {
             boolean not_in_forwardIndex = false;
             for (int j=0; j <tokens.length; j++){
 
+                // removing non-ASCII characters with this delimiting expression [^\\x00-\\x7F] & changing to lower case
                 tokens[j] = Normalizer.normalize(tokens[j], Normalizer.Form.NFD).replaceAll("[^\\x00-\\x7F]", "").toLowerCase();
 
                 if (tokens[j].equals("") || tokens[j].length() < 2)
                     continue;
 
+                // applying the stemmer
                 stemmer.setCurrent(tokens[j]);
                 stemmer.stem();
 
+                // removing stop words
                 if (stoplist.containsKey(tokens[j]) || stoplist.containsKey(stemmer.getCurrent()))
                     continue;
 
+
+                // if the stemmed term doesn't exist in the dictionary then add it in the dictionary
+                // as well as in termids.txt
                 if (!(dictionary.containsKey(stemmer.getCurrent()))){
                     try{
                         termID_writer.write((termID) + "\t" + stemmer.getCurrent() + "\r\n");
@@ -164,8 +173,10 @@ public class Tokenizer {
 
                 }
 
+                // <docID, termID> tuple
                 Tuple tuple = new Tuple(current_docID, dictionary.get(stemmer.getCurrent()));
 
+                // adding the tuple to forwardIndex, if the forwardIndex doesn't contain the tuple
                 if (!(forwardIndex.containsKey(tuple))){
                     not_in_forwardIndex = true;
                     forwardIndex.put(tuple, new ArrayList<Integer>());
@@ -175,6 +186,7 @@ public class Tokenizer {
 
             }
 
+            // also writing current_docID to docids.txt
             if (not_in_forwardIndex) {
 
                 try {
@@ -186,14 +198,17 @@ public class Tokenizer {
                 }
             }
 
-                Iterator iterator = forwardIndex.entrySet().iterator();
 
-                while (iterator.hasNext()){
+            // writing forwardIndex to disk
 
-                    Map.Entry tup = (Map.Entry) iterator.next();
-                    Tuple index_tuple = (Tuple) tup.getKey();
+            Iterator forwardIndex_iterator = forwardIndex.entrySet().iterator();
 
-                    ArrayList<Integer> val = (ArrayList<Integer>) tup.getValue();
+            while (forwardIndex_iterator.hasNext()){
+
+                    Map.Entry map_entry = (Map.Entry) forwardIndex_iterator.next();
+                    Tuple index_tuple = (Tuple) map_entry.getKey();
+
+                    ArrayList<Integer> val = (ArrayList<Integer>) map_entry.getValue();
 
                     try {
 
@@ -202,9 +217,9 @@ public class Tokenizer {
                         for (int k=0; k < val.size(); k++)
                             forwardIndex_writer.write("\t" + val.get(k));
 
-                        iterator.remove();
+                        forwardIndex_iterator.remove(); // avoids a ConcurrentModificationException
 
-                        if (iterator.hasNext() == false && i == fileNames.size() -1 )
+                        if (forwardIndex_iterator.hasNext() == false && i == fileNames.size() -1 ) // preventing the new line at the end of file
                             break;
 
                         forwardIndex_writer.write("\r\n");
@@ -213,7 +228,8 @@ public class Tokenizer {
                         System.out.println("Error in file mapping of doc_index.txt");
                     }
                 }
-            }
+
+        }   // end for loop
 
             try{
 

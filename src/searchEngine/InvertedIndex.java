@@ -61,6 +61,7 @@ public class InvertedIndex {
         for (int i=1; i < total_terms + 1; i++)
             this.indexItems[i] = new IndexItem();
 
+
         try (BufferedReader buf = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\searchEngine\\doc_index.txt")))
         {
             String line;
@@ -85,8 +86,10 @@ public class InvertedIndex {
                     previous_docID = previous_docID + docIDandOffsetArrayList.get(i).item_docID;
 
 
+                // document delta
                 int delta_docID = docID - previous_docID;
 
+                // adding the document delta
                 docIDandOffsetArrayList.add(indexItems[termID].new DocIDandOffset(delta_docID, Integer.parseInt(data[2])));
                 int termOffset_aggregate = Integer.parseInt(data[2]);
 

@@ -2,6 +2,7 @@ package searchEngine;
 
 import org.jsoup.Jsoup;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -13,10 +14,10 @@ public class FileHandler {
 
 
     // to read & return all data from the given file, in the standard charsets utf_8
-    public static String readFile (String file){
+    public static String readFile (String file_path){
 
         try{
-            String fileData = new String(Files.readAllBytes(Paths.get(file)), StandardCharsets.UTF_8);
+            String fileData = new String(Files.readAllBytes(Paths.get(file_path)), StandardCharsets.UTF_8);
             return fileData;
         }
         catch (IOException e){
@@ -34,14 +35,13 @@ public class FileHandler {
         String html = null;
 
         try{
-            // first converting all the data in the http string to lower case & then ignoring all the headers
+
             html = http.substring(http.toLowerCase().indexOf("<!doctype>"));
         }
         catch (StringIndexOutOfBoundsException e){
 
             try{
-                // if headers do not exist then
-                // first converting all the data in the http string to lower case & then ignoring all HTML tags
+
                 html = http.substring(http.toLowerCase().indexOf("<html>"));
             }
             catch (StringIndexOutOfBoundsException s){
@@ -62,15 +62,15 @@ public class FileHandler {
         File folder = new File(directory);  // folder (path) containing all the files
         File[] listOfFiles = folder.listFiles();
 
+//        BufferedWriter list_of_files =
+
         ArrayList<String> fileNames = new ArrayList<String>();
 
         for (int i=0; i< listOfFiles.length; i++){
 
             // filtering valid files
-            if (listOfFiles[i].isFile()){
-
+            if (listOfFiles[i].isFile())
                 fileNames.add(listOfFiles[i].getName());
-            }
 
 
         }

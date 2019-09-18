@@ -2,30 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17ecd239-cfa9-48ef-96e1-44bde49cf6d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/InvertedIndex$IndexItem$DocIDandOffset.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/InvertedIndex$IndexItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/InvertedIndex.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/counter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/doc_index.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/docids.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/termids.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/searchEngine/term_index.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/searchEngine/term_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/FileHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/Tokenizer$Tuple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/Tokenizer$Tuple.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/Tokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IR Search Engine/searchEngine/Tokenizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/searchEngine/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchEngine/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/searchEngine/InvertedIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchEngine/InvertedIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/searchEngine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchEngine/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/searchEngine/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchEngine/Tokenizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/searchEngine/doc_index.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/searchEngine/docids.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/searchEngine/termids.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,42 +23,46 @@
     <session id="-164950373">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Tokenizer" value="1" />
-          <entry key="java" value="48" />
-          <entry key="txt" value="1" />
+          <entry key="java" value="67" />
+          <entry key="txt" value="4" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="49" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="68" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8157" />
+          <entry key="java" value="12444" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8157" />
+          <entry key="JAVA" value="12444" />
         </counts>
       </usages-collector>
     </session>
@@ -83,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/searchEngine/InvertedIndex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3388">
-              <caret line="144" selection-start-line="144" selection-end-line="144" />
+            <state relative-caret-position="1408">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,11 +81,35 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/searchEngine/IndexReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-146">
+              <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/searchEngine/FileHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/searchEngine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+            <state relative-caret-position="308">
+              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,11 +117,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/searchEngine/Tokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="5038">
+              <caret line="221" column="140" selection-start-line="221" selection-start-column="140" selection-end-line="221" selection-end-column="140" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/searchEngine/stoplist.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -122,6 +144,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>g</find>
+      <find>hashCode</find>
+      <find>stoplist</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -130,10 +159,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/searchEngine/FileHandler.java" />
-        <option value="$PROJECT_DIR$/src/searchEngine/Tokenizer.java" />
-        <option value="$PROJECT_DIR$/src/searchEngine/InvertedIndex.java" />
         <option value="$PROJECT_DIR$/src/searchEngine/Main.java" />
+        <option value="$PROJECT_DIR$/src/searchEngine/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/searchEngine/IndexReader.java" />
+        <option value="$PROJECT_DIR$/src/searchEngine/InvertedIndex.java" />
       </list>
     </option>
   </component>
@@ -157,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -180,13 +210,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568404760028" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568573811100" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/searchEngine/lucene-stemmers-3.4.0.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -212,7 +241,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="IndexReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="searchEngine.IndexReader" />
+      <module name="IR Search Engine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="searchEngine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="searchEngine.Main" />
       <module name="IR Search Engine" />
@@ -227,9 +269,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.IndexReader" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.IndexReader" />
       </list>
     </recent_temporary>
   </component>
@@ -251,12 +298,16 @@
       <workItem from="1568077412542" duration="589000" />
       <workItem from="1568141130526" duration="2795000" />
       <workItem from="1568294471245" duration="4054000" />
-      <workItem from="1568375362648" duration="7641000" />
+      <workItem from="1568375362648" duration="11470000" />
+      <workItem from="1568467732468" duration="2541000" />
+      <workItem from="1568500153820" duration="5120000" />
+      <workItem from="1568617284608" duration="2931000" />
+      <workItem from="1568633394011" duration="3068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32878000" />
+    <option name="totallyTimeSpent" value="50367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -266,14 +317,14 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.16490166" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1354009" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.38497654" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.3286385" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.19248827" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.20500782" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.49608764" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49924356" weight="0.07355242" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -296,14 +347,14 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.16018662" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.13161875" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.38497654" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.3286385" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.19248827" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.20500782" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.49608764" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49924356" weight="0.07355242" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -344,28 +395,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/searchEngine/stoplist.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        <state relative-caret-position="330">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/searchEngine/FileHandler.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/searchEngine/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="5038">
+          <caret line="221" column="140" selection-start-line="221" selection-start-column="140" selection-end-line="221" selection-end-column="140" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/searchEngine/InvertedIndex.java">
+    <entry file="file://$PROJECT_DIR$/src/searchEngine/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3388">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
+        <state relative-caret-position="308">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -374,15 +422,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/searchEngine/IndexReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
+        <state relative-caret-position="-146">
+          <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/searchEngine/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/searchEngine/InvertedIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        <state relative-caret-position="1408">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/searchEngine/FileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
