@@ -1,0 +1,32 @@
+
+?squid:S1148o"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+nsquid:S00117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿°´ğùÿÿÿÿ
+nsquid:S00117*"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û·×÷ÿÿÿÿÿ
+?squid:S11485"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Tsquid:S1197I"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+qsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ãŠ+
+zsquid:S00116"bRename this field "times_term_in_documents" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚±ÚÜ
+msquid:S00116#"VRename this field "total_terms" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô“è%
+isquid:S00117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¡¬¬
+isquid:S00117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µŞ™Õ
+csquid:S2095z"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(×‚Ìš
+msquid:S00116""URename this field "total_docs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨íçâ
+rsquid:S00116"URename this field "item_docID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒµÑ†şÿÿÿÿ
+ksquid:S00100t"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œßêûúÿÿÿÿ
+csquid:S2095x"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(ÄÍÂ›
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(ëƒÍ
+Esquid:S1068"".Remove this unused "total_docs" private field.(¨íçâ
+?squid:S1148l"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßšßÉÿÿÿÿÿ
+O
+squid:S106F"9Replace this use of System.out or System.err by a logger.(˜ûı£
+nsquid:S00117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¯ïııÿÿÿÿ
+ksquid:S001009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğğ—şşÿÿÿÿ
+isquid:S00117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë¾¹
+esquid:S1192*"IDefine a constant instead of duplicating this literal "user.dir" 4 times.(Û·×÷ÿÿÿÿÿ
+T
+squid:S106N"9Replace this use of System.out or System.err by a logger.(Ü¶¡­ÿÿÿÿÿ
+hsquid:S2095*"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(Û·×÷ÿÿÿÿÿ
+nsquid:S00116"VRename this field "item_offset" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãöÒı
+asquid:S2147n"ECombine this catch with the one at line 107, which has the same body.(©œ¡ÿÿÿÿÿ

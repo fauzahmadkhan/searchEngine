@@ -1,0 +1,88 @@
+
+P
+squid:S106®"9Replace this use of System.out or System.err by a logger.(Ó‚Æ˜
+bsquid:S2095y"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ÿ‡Ó
+O
+squid:S106¸"9Replace this use of System.out or System.err by a logger.(¥™ó~
+U
+squid:S106À"9Replace this use of System.out or System.err by a logger.(Ø–ªùÿÿÿÿ
+@squid:S1148“"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+P
+squid:S106Ô"9Replace this use of System.out or System.err by a logger.(…¼ıù
+P
+squid:S106Ó"9Replace this use of System.out or System.err by a logger.(¬ÑšÔ
+U
+squid:S106´"9Replace this use of System.out or System.err by a logger.(ĞÜòøÿÿÿÿ
+Usquid:S1197€"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+3squid:S3626ß"Remove this redundant jump.(ûÁİ…
+Tsquid:S11977"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+P
+squid:S106è"9Replace this use of System.out or System.err by a logger.(ŞÊ›
+zsquid:S00116"bRename this field "times_term_in_documents" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚±ÚÜ
+hsquid:S001171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ÎU
+@squid:S1148²"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+U
+squid:S106Ş"9Replace this use of System.out or System.err by a logger.(è‹ãÒıÿÿÿÿ
+ssquid:S00116"VRename this field "total_terms" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß®Ğ˜ıÿÿÿÿ
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÎØÜÓ
+P
+squid:S106º"9Replace this use of System.out or System.err by a logger.(µ²É¾
+P
+squid:S106Ë"9Replace this use of System.out or System.err by a logger.(ßº„ª
+P
+squid:S106î"9Replace this use of System.out or System.err by a logger.(ÈêÕŠ
+P
+squid:S106¯"9Replace this use of System.out or System.err by a logger.(¦±ä
+Tsquid:S1197\"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+U
+squid:S106Ç"9Replace this use of System.out or System.err by a logger.(ŸÔî×ùÿÿÿÿ
+N
+squid:S106H"9Replace this use of System.out or System.err by a logger.(ƒ„c
+bsquid:S2095V"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(áà¤ 
+osquid:S00117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÃúùÿÿÿÿ
+P
+squid:S106­"9Replace this use of System.out or System.err by a logger.(¡Ìä¿
+[squid:UselessImportCheck"7Remove this unused import 'javax.imageio.IIOException'.(´ÂÏ’
+P
+squid:S106Ï"9Replace this use of System.out or System.err by a logger.(¦±ä
+Usquid:S1197§"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+T
+squid:S106k"9Replace this use of System.out or System.err by a logger.(—Âìùÿÿÿÿ
+… squid:ForLoopCounterChangedCheckÔ"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ
+P
+squid:S106ã"9Replace this use of System.out or System.err by a logger.(Ó‚Æ˜
+@squid:S1148æ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+}squid:S00116#"`Rename this field "term_frequency_in_doc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªú°ÿÿÿÿÿ
+qsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ãŠ+
+osquid:S00117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÍ¡Úşÿÿÿÿ
+isquid:S2095ö"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ÏĞíáûÿÿÿÿ
+Nsquid:S1751â"6Remove this "return" statement or make it conditional.(öË…
+U
+squid:S106Ù"9Replace this use of System.out or System.err by a logger.(ÊÈˆßùÿÿÿÿ
+_squid:S11921"IDefine a constant instead of duplicating this literal "user.dir" 6 times.(±ÎU
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÏñÀ
+jsquid:S3776—"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(Çµí‘
+isquid:S00117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªùí	
+P
+squid:S106¬"9Replace this use of System.out or System.err by a logger.(ª² Ÿ
+P
+squid:S106ì"9Replace this use of System.out or System.err by a logger.(†ó§º
+csquid:S2095Á"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(¦Õ-
+osquid:S00116"WRename this field "unique_terms" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÀÄ³
+Usquid:S1197È"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+gsquid:S00100î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§â•”
+jsquid:S00117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿Ú ‚
+U
+squid:S106í"9Replace this use of System.out or System.err by a logger.(Üè®…øÿÿÿÿ
+U
+squid:S106¨"9Replace this use of System.out or System.err by a logger.(¾ßœ²şÿÿÿÿ
+U
+squid:S106½"9Replace this use of System.out or System.err by a logger.(º×¬¶úÿÿÿÿ
+usquid:S2293$"YReplace the type specification in this constructor call with the diamond operator ("<>").(„†ÑÌøÿÿÿÿ
+osquid:S00117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»çÀ×ÿÿÿÿÿ
+hsquid:S00117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áà¤ 
+bsquid:S20951"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(±ÎU
+U
+squid:S106¢"9Replace this use of System.out or System.err by a logger.(è‹ãÒıÿÿÿÿ
+isquid:S2095¡"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(¤Ë¬Çşÿÿÿÿ

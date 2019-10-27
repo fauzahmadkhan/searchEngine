@@ -1,0 +1,40 @@
+
+Fsquid:S1125Ş")Remove the literal "false" boolean value.(©ª»ìúÿÿÿÿ
+nsquid:S00117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äŞÖÿÿÿÿÿ
+psquid:S2293L"YReplace the type specification in this constructor call with the diamond operator ("<>").(ı¾¸Ú
+isquid:S00117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÜ´ı
+osquid:S00117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·£şÿÿÿÿ
+U
+squid:S106€"9Replace this use of System.out or System.err by a logger.(¡Æ¹Äıÿÿÿÿ
+qsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ãŠ+
+hsquid:S00117j"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÙ¿m
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ä¬ôıÿÿÿÿ
+usquid:S2293M"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÃŠ Ÿşÿÿÿÿ
+u
+squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(¹£ë–ÿÿÿÿÿ
+esquid:S1192U"IDefine a constant instead of duplicating this literal "user.dir" 5 times.(äŞÖÿÿÿÿÿ
+@squid:S1148õ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+O
+squid:S106a"9Replace this use of System.out or System.err by a logger.(‘¨½Ù
+U
+squid:S106«"9Replace this use of System.out or System.err by a logger.(£Ë™€ıÿÿÿÿ
+gsquid:S1206:"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã
+isquid:S00117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûû³¶
+T
+squid:S106y"9Replace this use of System.out or System.err by a logger.(«æÏúÿÿÿÿ
+hsquid:S2095U"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(äŞÖÿÿÿÿÿ
+fsquid:S00100Q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Çã÷
+nsquid:S00117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÁ£Ëúÿÿÿÿ
+P
+squid:S106Å"9Replace this use of System.out or System.err by a logger.(ÍÊ»›
+osquid:S00117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†–Î…ÿÿÿÿÿ
+isquid:S00117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¨»í
+jsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìğí
+dsquid:S1854Ã"GRemove this useless assignment to local variable "not_in_forwardIndex".(­ºŸÒúÿÿÿÿ
+U
+squid:S106ä"9Replace this use of System.out or System.err by a logger.(Ä¿¬Šşÿÿÿÿ
+osquid:S00117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù„ŸÛùÿÿÿÿ
+osquid:S00117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ÔËòıÿÿÿÿ
+usquid:S2293K"YReplace the type specification in this constructor call with the diamond operator ("<>").(üå«åûÿÿÿÿ
+ksquid:S00100f"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÜÓùÿÿÿÿ
+nsquid:S3776f"RRefactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed.(ÎÜÓùÿÿÿÿ

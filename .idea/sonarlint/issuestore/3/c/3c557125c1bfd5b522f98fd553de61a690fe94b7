@@ -1,0 +1,12 @@
+
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñø±´8 õ¾Îà-
+Lsquid:S1481
+".Remove this unused "indexData" local variable.(È¯¯İ8à‚’Æà-
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨·¯´ûÿÿÿÿ8 õ¾Îà-
+[squid:S1854
+"=Remove this useless assignment to local variable "indexData".(È¯¯İ8à‚’Æà-
+[squid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ8ÇÎÌÄà-
+bsquid:S1854"DRemove this useless assignment to local variable "avg_query_length".(‘ıù¬8ŠüÂÎà-
+Xsquid:S1481"5Remove this unused "avg_query_length" local variable.(¨·¯´ûÿÿÿÿ8 õ¾Îà-
+Msquid:S00108")Either remove or fill this block of code.(ŸÙ¹„ûÿÿÿÿ8’áÅÎà-
+†squid:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ŸÙ¹„ûÿÿÿÿ8’áÅÎà-
