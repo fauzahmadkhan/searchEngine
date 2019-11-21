@@ -1,0 +1,55 @@
+
+W
+squid:S106Ñ"9Replace this use of System.out or System.err by a logger.(Îù—Ù8ÅñÈÜæ-
+usquid:S00117x"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù–¯úÿÿÿÿ8ÅñÈÜæ-
+W
+squid:S106É"9Replace this use of System.out or System.err by a logger.(ğÔ‘¬8ˆ­£Üæ-
+Gsquid:S1148 "#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÅñÈÜæ-
+[squid:S1197u"8Move the array designator from the variable to the type.(ûåóİùÿÿÿÿ8ÅñÈÜæ-
+\
+squid:S106Î"9Replace this use of System.out or System.err by a logger.(ºÀïùÿÿÿÿ8é³™èè-
+\
+squid:S106Ğ"9Replace this use of System.out or System.err by a logger.(Ûş¼›øÿÿÿÿ8é³™èè-
+Fsquid:S1148l"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÅñÈÜæ-
+\
+squid:S106Û"9Replace this use of System.out or System.err by a logger.(†Æ©‡şÿÿÿÿ8›‹£Üæ-
+‹"squid:ClassVariableVisibilityCheck"QMake docID a static final constant or non-public and provide accessors if needed.(ëõÊµıÿÿÿÿ8µùŸ£æ-
+ˆ"squid:ClassVariableVisibilityCheck*"SMake docInfo a static final constant or non-public and provide accessors if needed.(Àóôä8Æİ¨£æ-
+osquid:CommentedOutCodeLineÌ"<This block of commented-out lines of code should be removed.(«æÕéüÿÿÿÿ8Ïèäè-
+usquid:S00117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë’òŞÿÿÿÿÿ8¯îÅÜæ-
+—"squid:ClassVariableVisibilityCheck+"]Make queryPrecisionSum a static final constant or non-public and provide accessors if needed.(»’í°ùÿÿÿÿ8×ÓõÏæ-
+rsquid:S00116:"NRename this field "MAP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âìšÀûÿÿÿÿ8­Ğæ-
+"squid:ClassVariableVisibilityCheck"UMake precision a static final constant or non-public and provide accessors if needed.(ñéÙÓıÿÿÿÿ8µùŸ£æ-
+’"squid:ClassVariableVisibilityCheck,"XMake avgPrecision a static final constant or non-public and provide accessors if needed.(ıó½áıÿÿÿÿ8‰ÍıÏæ-
+Š"squid:ClassVariableVisibilityCheck"UMake relevance a static final constant or non-public and provide accessors if needed.(ÒÆàƒ8ßß £æ-
+\
+squid:S106Ù"9Replace this use of System.out or System.err by a logger.(˜‡™¡ıÿÿÿÿ8ˆ­£Üæ-
+[squid:S1197E"8Move the array designator from the variable to the type.(ûåóİùÿÿÿÿ8‰ÍıÏæ-
+W
+squid:S106º"9Replace this use of System.out or System.err by a logger.(‹±«¯8ÅñÈÜæ-
+W
+squid:S106Ê"9Replace this use of System.out or System.err by a logger.(¿³¡“8›‹£Üæ-
+\
+squid:S106İ"9Replace this use of System.out or System.err by a logger.(Ù¡ºïøÿÿÿÿ8ÅñÈÜæ-
+nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(å®Úşÿÿÿÿ8‰ÍıÏæ-
+W
+squid:S106Í"9Replace this use of System.out or System.err by a logger.(¦æğŞ8æ°—èè-
+squid:S1319*"rThe type of the "docInfo" object should be an interface such as "List" rather than the implementation "ArrayList".(Àóôä8Æİ¨£æ-
+ˆ"squid:ClassVariableVisibilityCheck("SMake queryID a static final constant or non-public and provide accessors if needed.(óŒ½©8¨ÚÌ†æ-
+vsquid:S3776¥"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(œ¯ŒŠşÿÿÿÿ8ÅñÈÜæ-
+\
+squid:S106Ú"9Replace this use of System.out or System.err by a logger.(é™òÚÿÿÿÿÿ8›‹£Üæ-
+V
+squid:S106Ü"9Replace this use of System.out or System.err by a logger.(İÍîf8ÅñÈÜæ-
+psquid:S3776="RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ÜÓ•«8ğ¢»Üæ-
+nsquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(½î˜Àşÿÿÿÿ8ß™Â£æ-
+osquid:S2095r"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(èÙ©®ÿÿÿÿÿ8ÅñÈÜæ-
+osquid:S2095B"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(´Ù£Çüÿÿÿÿ8‰ÍıÏæ-
+…"squid:ClassVariableVisibilityCheck"PMake rank a static final constant or non-public and provide accessors if needed.(á°¸º8µùŸ£æ-
+Ÿ"squid:ClassVariableVisibilityCheck9"eMake queriesPrecisionSummation a static final constant or non-public and provide accessors if needed.(€ö€’ÿÿÿÿÿ8‰ÍıÏæ-
+‰"squid:ClassVariableVisibilityCheck:"OMake MAP a static final constant or non-public and provide accessors if needed.(âìšÀûÿÿÿÿ8­Ğæ-
+W
+squid:S106Ë"9Replace this use of System.out or System.err by a logger.(ĞÉÑ8›‹£Üæ-
+vsquid:S00117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èü™„üÿÿÿÿ8ÅñÈÜæ-
+\
+squid:S106Ï"9Replace this use of System.out or System.err by a logger.(Ôù¶üÿÿÿÿ8é³™èè-

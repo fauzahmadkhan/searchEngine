@@ -35,13 +35,13 @@ public class IndexData {
     }
 
 
-    public static double relevent_docs_size_in_rankList = 100;
+    public static final double RELEVANT_DOCS_SIZE_IN_QUERY_RANKLIST = 250;
 
     public HashMap<Integer, HashMap<Integer, Integer>> docIndex;
     public HashMap<Integer, String> docNames;
     public HashMap<Integer, TermInfo> termInfo;
 
-    public double docLengthSum = 0;
+    public double terms_tf_corpus_sum = 0;
     public int total_docs = 0;
 
     double[] docs_length;
@@ -79,17 +79,19 @@ public class IndexData {
 
             termIndex_reader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\ranker\\input files\\term_index.txt"));
 
+            //System.out.println(offset);
             termIndex_reader.skip(offset);
 
             String line = termIndex_reader.readLine();
             String data[] = line.split("\t");
 
-            int docID = Integer.parseInt(data[1].split(":")[0]);
+
+            int docID = Integer.parseInt(data[1].split(",")[0]);
             int tf = 1;
 
             for (int i = 2; i < data.length; i++) {
 
-                if (Integer.parseInt(data[i].split(":")[0]) == 0)
+                if (Integer.parseInt(data[i].split(",")[0]) == 0)
                     tf++;
                 else {
 
@@ -105,7 +107,7 @@ public class IndexData {
 
                     tf = 1;
 
-                    docID = docID + Integer.parseInt(data[i].split(":")[0]);
+                    docID = docID + Integer.parseInt(data[i].split(",")[0]);
                 }
             }
 
@@ -127,6 +129,7 @@ public class IndexData {
 
         return termFreqInTermOccurredDocs;
     }
+
 
     public void find_allDocs_length() {
 
@@ -164,7 +167,8 @@ public class IndexData {
 
                     avgDocLength = avgDocLength + docLength;
 
-                    docs_length[docID - 1] = docLength;
+                    if (docID < docs_length.length)
+                        docs_length[docID - 1] = docLength;
 
                     docID = Integer.parseInt(data[0]);
 
@@ -177,7 +181,8 @@ public class IndexData {
 
             avgDocLength = avgDocLength + docLength;
 
-            docs_length[docID - 1] = docLength;
+            if (docID < docs_length.length)
+                docs_length[docID - 1] = docLength;
 
             docIndex.put(docID, docTermsAndFreq);
 
@@ -205,7 +210,7 @@ public class IndexData {
                 String data[] = line.split("\t");
                 termInfo.put(Integer.parseInt(data[0]), new TermInfo(Long.parseLong(data[1]), Long.parseLong(data[2]), Long.parseLong(data[3])));
 
-                docLengthSum = docLengthSum + Long.parseLong(data[2]);
+                terms_tf_corpus_sum = terms_tf_corpus_sum + Long.parseLong(data[2]);
 
                 line = termInfo_reader.readLine();
             }

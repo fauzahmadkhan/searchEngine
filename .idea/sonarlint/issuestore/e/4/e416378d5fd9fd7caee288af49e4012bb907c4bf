@@ -1,12 +1,14 @@
 
-isquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(ÚÙ€Ó8²º‚Ïà-
-psquid:S00117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëŠ©Ä8†ÇûÎà-
-squid:S00116"[Rename this field "avg_query_length" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨·¯´ûÿÿÿÿ8ŠÄâÎà-
-†"squid:ClassVariableVisibilityCheck"QMake score a static final constant or non-public and provide accessors if needed.(ß™àš8éýÙÎà-
-usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰»¸Ëøÿÿÿÿ8–›èÎà-
+psquid:S00117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–íæÏ8ÁµÌõà-
+psquid:S00117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºøä‚8ÁµÌõà-
+psquid:S001179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëŠ©Ä8†ÇûÎà-
+[squid:S1197"8Move the array designator from the variable to the type.(ÒÓ¬Äùÿÿÿÿ8²½ÓÂá-
 …"squid:ClassVariableVisibilityCheck
 "QMake docID a static final constant or non-public and provide accessors if needed.(¡ûým8éýÙÎà-
-esquid:S1854+"GRemove this useless assignment to local variable "queryTermsFreq_docs".(ëŠ©Ä8†ÇûÎà-
-Zsquid:S1172"7Remove this unused method parameter "avg_query_length".(‰»¸Ëøÿÿÿÿ8–›èÎà-
-šsquid:S1319"wThe type of the "queryTermIDs" object should be an interface such as "List" rather than the implementation "ArrayList".(‰»¸Ëøÿÿÿÿ8–›èÎà-
-Vsquid:S1481+"8Remove this unused "queryTermsFreq_docs" local variable.(ëŠ©Ä8†ÇûÎà-
+‹"squid:ClassVariableVisibilityCheck"QMake score a static final constant or non-public and provide accessors if needed.(áÑíþÿÿÿÿ8éýÙÎà-
+\squid:S4973["9Use the "equals" method if value comparison was intended.(²™…½ýÿÿÿÿ8úäÕõà-
+psquid:S00117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦’–Í8ÜÔˆäè-
+usquid:S00117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÅ¦Žüÿÿÿÿ8ïïÛõà-
+šsquid:S1319,"wThe type of the "queryTermIDs" object should be an interface such as "List" rather than the implementation "ArrayList".(¨Ïáþÿÿÿÿ8–›èÎà-
+usquid:S00117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þæ¢òÿÿÿÿÿ8öÏõà-
+usquid:S37767"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ÄÖºÅøÿÿÿÿ8úäÕõà-

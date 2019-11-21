@@ -1,254 +1,257 @@
 package searchEngine;
 
-// Snowball stemming algorithm
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.Normalizer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+
 import org.tartarus.snowball.ext.EnglishStemmer;
 
-import java.io.*;
-import java.text.Normalizer;
-import java.util.*;
 
+//Part 1 of the assignment
 public class Tokenizer {
 
-    private String path;
-    private ArrayList<String> fileNames;
-    private HashMap<String, Integer> dictionary;    // also contains mapping to termids
-    private HashMap<String, String> stoplist;
-    private TreeMap<Tuple, ArrayList<Integer>> forwardIndex;        // without hashMap
-    int terms =0;
+    int totalTerms = 0;
 
-    // Tuple <termID, docID> implements the Comparable interface
-    public class Tuple implements Comparable{
+    public class KeyPair implements Comparable {
 
-        private int termID;
-        private int docID;
+        private final int docId;
+        private final int termId;
 
-        public Tuple(int termID, int docID){
-
-            this.termID = termID;
-            this.docID = docID;
+        public KeyPair(int docId, int termId) {
+            this.docId = docId;
+            this.termId = termId;
         }
-        public void setTuple(int termID, int docID){
 
-            this.termID = termID;
-            this.docID = docID;
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof KeyPair)) return false;
+            KeyPair other = (KeyPair) o;
+            return this.docId == other.docId && this.termId == other.termId;
         }
 
 
         @Override
-        public int compareTo(Object obj){
+        public int hashCode() {
+            int result = (int) docId;
+            result = 31 * result + (int) termId;
+            return result;
+        }
 
-            if (obj == null)
-                return -2;
+        @Override
+        public int compareTo(Object arg0) {
 
-            if (this.termID == ((Tuple) obj).termID && this.docID == ((Tuple) obj).docID)
-                return 0;
-
-            if (this.termID > ((Tuple) obj).termID || this.docID > ((Tuple) obj).docID)
-                return 1;
-
-            if (this.termID < ((Tuple) obj).termID || this.docID < ((Tuple) obj).docID)
+            if (arg0 == null)
                 return -1;
 
-            return -2;
+            KeyPair other = (KeyPair) arg0;
+            if (this.docId == other.docId && this.termId == other.termId)
+                return 0;
+
+            else if (this.docId > other.docId) {
+                return 1;
+            } else if (this.docId < other.docId) {
+                return -1;
+            } else if (this.termId > other.termId) {
+                return 1;
+            } else return -1;
 
         }
 
-
-        @Override
-        public boolean equals(Object obj){
-            if (this == obj)
-                return true;
-
-            if (!(obj instanceof Tuple))
-                return false;
-
-            return (this.termID == ((Tuple) obj).termID && this.docID == ((Tuple) obj).docID);
-        }
-
-
     }
 
-    Tokenizer(String abs_path){
+    private HashMap<String, String> stopWords;
+    private ArrayList<String> fileNames;
+    private HashMap<String, Integer> termsDictionary; //also contains mapping to termIds
+    private TreeMap<KeyPair, ArrayList<Integer>> forwardIndex;
+    private String directoryPath;
 
-        path = abs_path;
-        fileNames = FileHandler.getFileNamesFromDirectory(abs_path);
-        dictionary = new HashMap<String, Integer>();
-        stoplist = new HashMap<String, String>();
-        forwardIndex = new TreeMap<Tuple, ArrayList<Integer>>();
-        stoplist_reader();
+    //Constructor needs absolute path of directory
+    Tokenizer(String directory) {
+
+        this.directoryPath = directory;
+        fileNames = FileHandler.getFileNamesFromDirectory(directory);
+        stopWords = new HashMap<String, String>();
+        termsDictionary = new HashMap<String, Integer>();
+        forwardIndex = new TreeMap<KeyPair, ArrayList<Integer>>();
+        readStopWords();
     }
 
-    void stoplist_reader(){
 
-        try{
-            // reading stoplis.txt file
-            BufferedReader stoplist_reader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\searchEngine\\stoplist.txt"));
+    public void readStopWords() {
+        //reading stop list and creating its hash map
+        try {
+            BufferedReader stopListReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\searchEngine\\stoplist.txt"));
 
-            String word = stoplist_reader.readLine();
+            String word = stopListReader.readLine();
 
-            // creating hashMap of the stoplist
-            while (word != null){
-                stoplist.put(word, null);     // terminating each entry with null
-                word = stoplist_reader.readLine();
+            while (word != null) {
+
+                stopWords.put(word, null);
+                word = stopListReader.readLine();
+
             }
 
+            stopListReader.close();
+
+        } catch (IOException e) {
+
+            System.out.println("AN IO Exception occurred in readStopWords Function in Tokenizer class!");
+
         }
-        catch (IOException e){
-            System.out.println("stoplist_reader() error");
-        }
+
 
     }
 
-    public void tokenize_and_write(){
-
-        BufferedWriter termID_writer =null;
-        BufferedWriter docID_writer =null;
-        BufferedWriter forwardIndex_writer =null;
+    public void TokenizeAndWriteToFiles() {
+        BufferedWriter docIdWriter = null;
+        BufferedWriter termIdWriter = null;
+        BufferedWriter forwardIndexWriter = null;
         EnglishStemmer stemmer = new EnglishStemmer();
+        int termId = 1;
 
-
-
-        // creating termids.txt, docids.txt & doc_index.txt files
-        try{
-            termID_writer = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\termids.txt"));
-
-            docID_writer = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\docids.txt"));
-
-            forwardIndex_writer = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\doc_index.txt"));
-
-        }
-        catch (IOException e){
-            System.out.println("tokenize_and_write() error");
+        //creating new file docids.txt
+        try {
+            docIdWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\docids.txt"));
+            termIdWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\termids.txt"));
+            forwardIndexWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\doc_index.txt"));
+        } catch (IOException e) {
+            System.out.println("An exception occurred while creating output files!");
         }
 
 
-        int current_docID =1;
-        for (int i=0; i< fileNames.size(); i++){
+        int currentDocumentId = 1;
+        for (int i = 0; i < fileNames.size(); i++) {
+            System.out.println("Tokenizer is now processing Document No: " + (i + 1) + ". (" + fileNames.get(i) + ")");
 
-            System.out.println("Processing Document#: " + (i + 1) + ".(" + fileNames.get(i) + ")");
 
-            // reading the document
-            String extract = FileHandler.fetchString_http(path + "\\" + fileNames.get(i));
-
+            //reading the document
+            String extract = FileHandler.extractStringFromHTTP(directoryPath + "\\" + fileNames.get(i));
 
             if (extract == null)
                 continue;
+            String[] tokens = extract.split("[\\p{Punct}\\s]+"); //tokenizing //////////////////////[0-9] added afterwards//////////////////
+            //doc.body().text().split("\\s*[^a-zA-Z]+\\s*");
+            //"[\\p{Punct}\\s[0-9]]+"
 
-            // tokenizing based on this delimiting regular expression [\\p{Punct}\\s]+ with no limit
-            String[] tokens = extract.split("[\\p{Punct}\\s]+");
 
-            int termID =1;
-            int current_position =1;
-            boolean not_in_forwardIndex = false;
-            for (int j=0; j <tokens.length; j++){
-
-                // removing non-ASCII characters with this delimiting expression [^\\x00-\\x7F] & changing to lower case
+            int currentPosition = 1;
+            boolean flag = false;
+            for (int j = 0; j < tokens.length; j++) {
+                //removing non ASCII characters & changing to lower case
                 tokens[j] = Normalizer.normalize(tokens[j], Normalizer.Form.NFD).replaceAll("[^\\x00-\\x7F]", "").toLowerCase();
+
 
                 if (tokens[j].equals("") || tokens[j].length() < 2)
                     continue;
 
-                // applying the stemmer
+                //Applying the Stemmer
                 stemmer.setCurrent(tokens[j]);
                 stemmer.stem();
 
-                // removing stop words
-                if (stoplist.containsKey(tokens[j]) || stoplist.containsKey(stemmer.getCurrent()))
-                    continue;
 
-
-                // if the stemmed term doesn't exist in the dictionary then add it in the dictionary
-                // as well as in termids.txt
-                if (!(dictionary.containsKey(stemmer.getCurrent()))){
-                    try{
-                        termID_writer.write((termID) + "\t" + stemmer.getCurrent() + "\r\n");
-                        dictionary.put(stemmer.getCurrent(), termID);
-                        termID++;
-                        terms++;
-
-                    }
-                    catch (IOException e){
-                        System.out.println("Error in the file mapping of termsid.txt");
-                    }
+                //removing stop words
+                if (stopWords.containsKey(tokens[j]) || stopWords.containsKey(stemmer.getCurrent())) {
+                    //  System.out.println("Stop Word Found: "+ tokens[j]+" "+i);
+                    continue; //ignore the word
 
                 }
 
-                // <docID, termID> tuple
-                Tuple tuple = new Tuple(current_docID, dictionary.get(stemmer.getCurrent()));
 
-                // adding the tuple to forwardIndex, if the forwardIndex doesn't contain the tuple
-                if (!(forwardIndex.containsKey(tuple))){
-                    not_in_forwardIndex = true;
-                    forwardIndex.put(tuple, new ArrayList<Integer>());
-                }
-
-                forwardIndex.get(tuple).add(current_position);
-
-            }
-
-            // also writing current_docID to docids.txt
-            if (not_in_forwardIndex) {
-
-                try {
-                    docID_writer.write(current_docID + "\t" + fileNames.get(i) + (i == fileNames.size() - 1 ? "" : "\r\n"));
-                    current_docID++;
-                    not_in_forwardIndex = false;
-                } catch (IOException e) {
-                    System.out.println("Error in the file mapping of docids.txt ");
-                }
-            }
-
-
-            // writing forwardIndex to disk
-
-            Iterator forwardIndex_iterator = forwardIndex.entrySet().iterator();
-
-            while (forwardIndex_iterator.hasNext()){
-
-                    Map.Entry map_entry = (Map.Entry) forwardIndex_iterator.next();
-                    Tuple index_tuple = (Tuple) map_entry.getKey();
-
-                    ArrayList<Integer> val = (ArrayList<Integer>) map_entry.getValue();
-
+                //adding to dictionary
+                if (termsDictionary.containsKey(stemmer.getCurrent())) {
+                    //the word is already in the dictionary, so do not end it again
+                    //(neither in dictionary nor in termIds.txt).
+                } else {
+                    //add to termsDictionary as well as termids.txt
                     try {
+                        termIdWriter.write((termId++) + "\t" + stemmer.getCurrent() + "\r\n");
+                        termsDictionary.put(stemmer.getCurrent(), (termId - 1));
+                        totalTerms++;
+                    } catch (IOException e) {
 
-                        forwardIndex_writer.write(index_tuple.docID + "\t" + index_tuple.termID);
-
-                        for (int k=0; k < val.size(); k++)
-                            forwardIndex_writer.write("\t" + val.get(k));
-
-                        forwardIndex_iterator.remove(); // avoids a ConcurrentModificationException
-
-                        if (forwardIndex_iterator.hasNext() == false && i == fileNames.size() -1 ) // preventing the new line at the end of file
-                            break;
-
-                        forwardIndex_writer.write("\r\n");
+                        System.out.println("An error Occurred while writing to termids.txt!");
                     }
-                    catch (IOException e){
-                        System.out.println("Error in file mapping of doc_index.txt");
-                    }
+
                 }
 
-        }   // end for loop
+                //docid, term id pair as key
 
-            try{
+                KeyPair key = new KeyPair(currentDocumentId, termsDictionary.get(stemmer.getCurrent()));
+                if (forwardIndex.containsKey(key)) {
 
-                BufferedWriter count_writer = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\counter.txt"));
-                count_writer.write(terms + "\t" + (current_docID - 1));
-                docID_writer.close();
-                termID_writer.close();
-                forwardIndex_writer.close();
-                count_writer.close();
+                } else {
+                    flag = true;
+                    forwardIndex.put(key, new ArrayList<Integer>());
+                }
 
+                forwardIndex.get(key).add(currentPosition++);
+
+
+            } //end of token reading of one file  loop
+
+            //writing document id to docids.txt
+            if (flag == true)
+                try {
+                    docIdWriter.write((currentDocumentId++) + "\t" + fileNames.get(i) + (i == fileNames.size() - 1 ? "" : "\r\n"));
+                    flag = false;
+                    //System.out.println(fileNames.get(i));
+                } catch (IOException e) {
+                    System.out.println("An exception occurred while writing to docids.txt!");
+                }
+
+
+            //writing forward index to disk
+            Iterator it = forwardIndex.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry) it.next();
+                KeyPair keyPair = (KeyPair) pair.getKey();
+                ArrayList<Integer> value = (ArrayList<Integer>) pair.getValue();
+                try {
+                    forwardIndexWriter.write(keyPair.docId + "\t" + keyPair.termId);
+
+
+                    for (int k = 0; k < value.size(); k++) {
+                        forwardIndexWriter.write("\t" + value.get(k));
+
+                    }
+
+
+                    it.remove(); // avoids a ConcurrentModificationException
+                    if (it.hasNext() == false && i == fileNames.size() - 1)//preventing the new line at the end of file
+                        break;
+                    forwardIndexWriter.write("\r\n");
+                } catch (IOException e) {
+                    System.out.println("An exception occurred while writing to doc_index.txt");
+                }
+
+
+            }
+
+
+        }//end of fileNames.size() loop (all files reading one by one)
+        try {
+
+            BufferedWriter countWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\searchEngine\\counter.txt"));
+            countWriter.write(totalTerms + "\t" + (currentDocumentId - 1));
+            docIdWriter.close();
+            termIdWriter.close();
+            forwardIndexWriter.close();
+            countWriter.close();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-        catch (IOException e){
-                e.printStackTrace();
-        }
 
-
-    }
-
-
+    } //end of Tokenize function
 
 
 }

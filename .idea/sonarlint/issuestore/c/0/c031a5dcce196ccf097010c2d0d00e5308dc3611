@@ -1,33 +1,39 @@
 
-Zsquid:S2184p"CCast one of the operands of this subtraction operation to a "long".(À—Œ
-‡squid:S1319("pThe type of the "termInfo" object should be an interface such as "Map" rather than the implementation "HashMap".(‡µ—ƒ
-[squid:S1444$"DMake this "public static relevent_docs_size_in_rankList" field final(ŠÚìŒ
-rsquid:S00116+"URename this field "total_docs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùıÃ–ùÿÿÿÿ
-esquid:S1192I"IDefine a constant instead of duplicating this literal "user.dir" 3 times.(ø§ï˜şÿÿÿÿ
-osquid:S00117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ğÂùÿÿÿÿ
-isquid:S2095‰"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(Œï·ùÿÿÿÿ
-nsquid:S00117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø§ï˜şÿÿÿÿ
-fsquid:S00100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¡ˆñ
-ksquid:S00116"TRename this field "tf_corpus" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óİ»>
+osquid:S00117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø§ï˜şÿÿÿÿ
+jsquid:S2095P"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(¤Ç“8ïîıÓè-
 P
-squid:S106²"9Replace this use of System.out or System.err by a logger.(ªúÚâ
-‚"squid:ClassVariableVisibilityCheck("TMake termInfo a static final constant or non-public and provide accessors if needed.(‡µ—ƒ
-Usquid:S1197"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
-‡squid:S1319'"pThe type of the "docNames" object should be an interface such as "Map" rather than the implementation "HashMap".(ÛÀµ‹
-isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª÷ò‘
-hsquid:S2095I"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ø§ï˜şÿÿÿÿ
-nsquid:S00116-"VRename this field "docs_length" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒìÙ¤
-˜"squid:ClassVariableVisibilityCheck$"jMake relevent_docs_size_in_rankList a static final constant or non-public and provide accessors if needed.(ŠÚìŒ
-†squid:S1319&"pThe type of the "docIndex" object should be an interface such as "Map" rather than the implementation "HashMap".(Š›şz
-†"squid:ClassVariableVisibilityCheck*"XMake docLengthSum a static final constant or non-public and provide accessors if needed.(Ğ”Ñ‚
-‚"squid:ClassVariableVisibilityCheck'"TMake docNames a static final constant or non-public and provide accessors if needed.(ÛÀµ‹
-€squid:S3008$"iRename this field "relevent_docs_size_in_rankList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÚìŒ
+squid:S106õ"9Replace this use of System.out or System.err by a logger.(ªúÚâ
+@squid:S1148Ã"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+[squid:S2184²"CCast one of the operands of this subtraction operation to a "long".(À—Œ
+ksquid:S00116"TRename this field "tf_corpus" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óİ»>
+osquid:S00117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ğÂùÿÿÿÿ
+‡squid:S1319*"pThe type of the "termInfo" object should be an interface such as "Map" rather than the implementation "HashMap".(‡µ—ƒ
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª÷ò‘
+™"squid:ClassVariableVisibilityCheck,"_Make terms_tf_corpus_sum a static final constant or non-public and provide accessors if needed.(«ùÅ‹ÿÿÿÿÿ8Õ»Ïè-
+Fsquid:S1148}"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ïîıÓè-
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ïîıÓè-
+†squid:S1319("pThe type of the "docIndex" object should be an interface such as "Map" rather than the implementation "HashMap".(Š›şz
+gsquid:S00100†"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¡ˆñ
+[squid:S1197V"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ8ïîıÓè-
 P
-squid:S106š"9Replace this use of System.out or System.err by a logger.(ùº†
-osquid:S00117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œï·ùÿÿÿÿ
-isquid:S2095£"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(²ğÂùÿÿÿÿ
-‰"squid:ClassVariableVisibilityCheck+"VMake total_docs a static final constant or non-public and provide accessors if needed.(ùıÃ–ùÿÿÿÿ
-Tsquid:S1197O"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
-Usquid:S1197©"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
-"squid:ClassVariableVisibilityCheck&"TMake docIndex a static final constant or non-public and provide accessors if needed.(Š›şz
-@squid:S1148€"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+squid:S106İ"9Replace this use of System.out or System.err by a logger.(ùº†
+usquid:S00117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óµ¼üÿÿÿÿ8ïîıÓè-
+"squid:ClassVariableVisibilityCheck("TMake docIndex a static final constant or non-public and provide accessors if needed.(Š›şz
+osquid:S00117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œï·ùÿÿÿÿ
+rsquid:S00116-"URename this field "total_docs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùıÃ–ùÿÿÿÿ
+Usquid:S1197Ò"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+`squid:S1192P"IDefine a constant instead of duplicating this literal "user.dir" 4 times.(¤Ç“
+Usquid:S1197ì"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+isquid:S2095Š"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ø§ï˜şÿÿÿÿ
+isquid:S2095æ"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(²ğÂùÿÿÿÿ
+‚"squid:ClassVariableVisibilityCheck)"TMake docNames a static final constant or non-public and provide accessors if needed.(ÛÀµ‹
+isquid:S2095Ì"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(Œï·ùÿÿÿÿ
+Usquid:S1197"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ
+‡squid:S1319)"pThe type of the "docNames" object should be an interface such as "Map" rather than the implementation "HashMap".(ÛÀµ‹
+‰"squid:ClassVariableVisibilityCheck-"VMake total_docs a static final constant or non-public and provide accessors if needed.(ùıÃ–ùÿÿÿÿ
+nsquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(Ãı¿·úÿÿÿÿ8ÂÉ×è-
+‚"squid:ClassVariableVisibilityCheck*"TMake termInfo a static final constant or non-public and provide accessors if needed.(‡µ—ƒ
+nsquid:S00116/"VRename this field "docs_length" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒìÙ¤
+csquid:S2147~"ECombine this catch with the one at line 124, which has the same body.(ï­£Ä8ïîıÓè-
+squid:S1319D"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(•µ£ñ8ïîıÓè-
+‚squid:S00116,"^Rename this field "terms_tf_corpus_sum" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ùÅ‹ÿÿÿÿÿ8Õ»Ïè-

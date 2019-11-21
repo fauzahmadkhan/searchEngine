@@ -1,0 +1,26 @@
+
+isquid:CommentedOutCodeLinev"<This block of commented-out lines of code should be removed.(ö¦¨ÿ8È‹Ñ¥æ-
+gsquid:S2259f"DA "NullPointerException" could be thrown; "writer" is nullable here.(ÄËªŸÿÿÿÿÿ8æš¥Öè-
+bsquid:S2259."DA "NullPointerException" could be thrown; "writer" is nullable here.(ïç¹ï8ú“£öà-
+gsquid:S2259;"DA "NullPointerException" could be thrown; "writer" is nullable here.(ÄËªŸÿÿÿÿÿ8ÝÄ¯öà-
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ‚•ýÿÿÿÿ8 õ¾Îà-
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­® úþÿÿÿÿ8®½²Îè-
+Fsquid:S1148="#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8›Â°öà-
+Fsquid:S1148h"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ê‘®Âá-
+gsquid:S2259Z"DA "NullPointerException" could be thrown; "writer" is nullable here.(¸­·Œýÿÿÿÿ8æš¥Öè-
+usquid:S3776	"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(¡þÏÖøÿÿÿÿ8–Ú®öà-
+nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(ÊØûÿÿÿÿ8æš¥Öè-
+†squid:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ŸÙ¹„ûÿÿÿÿ8’áÅÎà-
+lsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÊÅ–8Û¥Š÷å-
+U
+squid:S106P"9Replace this use of System.out or System.err by a logger.(¢ù¹N8®à™Âá-
+Fsquid:S1148`"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ãû«Âá-
+Fsquid:S1148K"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Š€—Âá-
+[squid:S1197	"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿ8ÇÎÌÄà-
+†squid:S1157D"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ãåü÷ûÿÿÿÿ8ôù¶öà-
+isquid:CommentedOutCodeLine\"<This block of commented-out lines of code should be removed.(þ½ˆÞ8—™åÖè-
+Fsquid:S11486"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8–Ú®öà-
+U
+squid:S106&"9Replace this use of System.out or System.err by a logger.(¢ù¹N8¨Ìšöà-
+Fsquid:S1148!"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÏÕ—öà-
+†squid:S1157l"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(›Úê¥ûÿÿÿÿ8Éü›†æ-

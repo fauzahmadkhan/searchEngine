@@ -1,0 +1,22 @@
+
+Fsquid:S11487"#Use a logger to log this exception.(Âşÿâûÿÿÿÿ8ş£Äöå-
+Fsquid:S1148j"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ş£Äöå-
+[squid:S1197I"8Move the array designator from the variable to the type.(ÁèÂ÷øÿÿÿÿ8ş£Äöå-
+csquid:S2147h"ECombine this catch with the one at line 101, which has the same body.(ï­£Ä8ş£Äöå-
+W
+squid:S106•"9Replace this use of System.out or System.err by a logger.(¾×ì8Üç¶öå-
+xsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ãŠ+8Á•öå-
+csquid:S2095s"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(×‚Ìš
+_squid:S1192+"IDefine a constant instead of duplicating this literal "user.dir" 4 times.(ìáš
+Usquid:S1135f"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8ş£Äöå-
+Usquid:S1135i"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8ş£Äöå-
+bsquid:S2095+"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ìáš
+psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(§«ô”
+nsquid:CommentedOutCodeLinez"<This block of commented-out lines of code should be removed.(ôàıÆûÿÿÿÿ8¯ßÕè-
+Fsquid:S1148g"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ş£Äöå-
+isquid:S2095r"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(üı¹18ş£Äöå-
+Isquid:S1068&"2Remove this unused "totalDocuments" private field.(”„Û
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Œ±¦—ùÿÿÿÿ8Üç¶öå-
+V
+squid:S106L"9Replace this use of System.out or System.err by a logger.(Ê×¦Ô8ş£Äöå-
+Usquid:S11356"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8ş£Äöå-

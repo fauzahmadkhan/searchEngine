@@ -1,10 +1,9 @@
 
-Ysquid:S2259'"BA "NullPointerException" could be thrown; "http" is nullable here.(Ïëü´
-ksquid:S00100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‹Œ±ùÿÿÿÿ
-qsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ãŠ+
-nsquid:S00117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‹Œ±ùÿÿÿÿ
-psquid:S2293C"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÍÁ’ó
-Qsquid:S1118":Add a private constructor to hide the implicit public one.(Îç’
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¢í£ùÿÿÿÿ
-‡squid:S1319<"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(È‹ÏÌ
-?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(Îç’8ÔÜ•öå-
+squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(È‹ÏÌ8ÔÜ•öå-
+esquid:S22595"BA "NullPointerException" could be thrown; "http" is nullable here.(´şùıúÿÿÿÿ8ÔÜ•öå-
+Usquid:S1135$"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8ÔÜ•öå-
+Fsquid:S1148%"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÔÜ•öå-
+nsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(Á¬™ıüÿÿÿÿ8ÔÜ•öå-
+wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÍÁ’ó8ÔÜ•öå-
+xsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ãŠ+8Í‰–öå-

@@ -21,13 +21,27 @@ public class OkapiBM25 {
     IndexData indexData;
 
     ArrayList<Integer> queryTermIDs;
-    double avg_query_length = 0;
 
     public static final double K1 = 1.2;
     public static final double K2 = 300;
     public static final double B = 0.75;
 
-    public OkapiBM25(IndexData indexData, ArrayList<Integer> queryTermIDs, double avg_query_length) {
+
+    public void bubbleSort(DocumentScore arr[]) {
+
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - i - 1; j++)
+                if (arr[j].score < arr[j + 1].score) {
+
+                    DocumentScore temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+    }
+
+
+    public OkapiBM25(IndexData indexData, ArrayList<Integer> queryTermIDs) {
 
         this.indexData = indexData;
         this.queryTermIDs = queryTermIDs;
@@ -59,11 +73,11 @@ public class OkapiBM25 {
 
                 int currentTermID = queryTermIDs.get(j);
 
-                ArrayList<IndexData.TermFreqInDoc> termFreqInDocs = queryTermsFreq_docs.get(currentTermID);
+                ArrayList<IndexData.TermFreqInDoc> termFreqInDocs_temp = queryTermsFreq_docs.get(currentTermID);
 
-                for (int k = 0; k < termFreqInDocs.size(); k++)
-                    if (termFreqInDocs.get(k).docID == i + 1)
-                        tf = termFreqInDocs.get(k).tf;
+                for (int k = 0; k < termFreqInDocs_temp.size(); k++)
+                    if (termFreqInDocs_temp.get(k).docID == i + 1)
+                        tf = termFreqInDocs_temp.get(k).tf;
 
                 double K = K1 * ((1 - B) + B * (indexData.docs_length[i]) / indexData.avgDocLength);
 
@@ -84,7 +98,7 @@ public class OkapiBM25 {
             }
         }
 
-        Sort.bubbleSort(documentScores);
+        bubbleSort(documentScores);
 
 
     }
